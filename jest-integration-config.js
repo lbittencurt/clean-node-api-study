@@ -1,21 +1,3 @@
-// const config = require('./jest.config.ts')
-// config.testMatch = ['**/*.spec.ts']
-module.export = {
-  roots: ['<rootDir>/src'],
-  testMatch: ['**/*.test.ts'],
-  collectCoverageFrom: [
-    '<rootDir>/src/**/*.ts',
-    '!<rootDir>/src/main/**',
-    '!<rootDir>/src/**/*-protocols.ts',
-    '!**/protocols/**',
-    '!**/test/**'
-  ],
-  coverageDirectory: 'coverage',
-  testEnvironment: 'node',
-  transform: {
-    '.+\\.ts$': 'ts-jest'
-  },
-  moduleNameMapper: {
-    '@/(.*)': '<rootDir>/src/$1'
-  }
-}
+const config = require('./jest.config')
+config.testMatch = ['**/*.test.ts']
+module.exports = config
